@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcula Bhaskara em JS</title>
     <link rel="stylesheet" href="js_calculabhaskara.css"/>
-    <link rel="icon" type="image/png" href="js_calculabhaskara.png">
+    <link rel="icon" type="image/png" href="js_calculabhaskara.png"/>
 </head>
 <body>
     <h1>Calcula Bhaskara em JS</h1>
-    <input type="text" name="txtn1" id="txtn1"> x² +
+    <input type="text" name="txtn1" id="txtn1" autofocus> x² +
     <input type="text" name="txtn2" id="txtn2"> x +
     <input type="text" name="txtn3" id="txtn3"> = 0  
     <p><input type="button" value="Calcular" onclick = "calcular()"></body></p>
     <div id="res">Resultado:</div>
+    <form action="index.html" method="POST" style="border: 0px">
+        <p><input type="submit" name="voltar" value="Voltar"></p>
+    </form>
     <script>
         function calcular(){
             var tn1 = window.document.getElementById("txtn1")

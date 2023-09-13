@@ -29,33 +29,37 @@
             var num_a = Number.parseFloat( tn1.value.replaceAll(',','.'))
             var num_b = Number.parseFloat( tn2.value.replaceAll(',','.'))
             var num_c = Number.parseFloat( tn3.value.replaceAll(',','.'))
+            var resultado = ""
+            var delta = 0
+            var x1 = 0
+            var x2 = 0
             // aqui
             if( num_a == 0)
             {
                 if( num_b == 0)
                 {
-                    var resultado = "x é indefinido"
+                    resultado = "x é indefinido"
                 } else {
                     if( num_c == 0)
                     {
-                        var resultado = "x = 0"                    
+                        resultado = "x = 0"                    
                     } else {
-                        var resultado = "x = " + num_c / num_b * -1
+                        resultado = "x = " + num_c / num_b * -1
                     }
                 }
             } else {
-                var delta = num_b ** 2 - ( 4 * num_a * num_c)
+                delta = num_b ** 2 - ( 4 * num_a * num_c)
                 if( delta < 0)
                 {
-                    var resultado = "x é indefinido"
+                    resultado = "x é indefinido"
                 } else {
                     if( delta == 0)
                     {
-                        var resultado = "x = " + ( num_b * -1 ) / ( 2 * num_a)
+                        resultado = "x = " + ( num_b * -1 ) / ( 2 * num_a)
                     } else {
                         x1 = ( num_b * -1 - delta ** 0.5) / ( 2 * num_a)
                         x2 = ( num_b * -1 + delta ** 0.5) / ( 2 * num_a)
-                        var resultado = "x = " + x1 + " e " + x2
+                        resultado = "x = " + x1 + " e " + x2
                     }
                 }
             }

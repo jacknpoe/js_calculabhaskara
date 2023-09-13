@@ -26,9 +26,15 @@
             var tn2 = window.document.getElementById("txtn2")
             var tn3 = window.document.getElementById("txtn3")
             var res = window.document.getElementById("res")
-            var num_a = Number.parseFloat( tn1.value.replaceAll(',','.'))
-            var num_b = Number.parseFloat( tn2.value.replaceAll(',','.'))
-            var num_c = Number.parseFloat( tn3.value.replaceAll(',','.'))
+            var txt_a = tn1.value
+            var txt_b = tn2.value
+            var txt_c = tn3.value
+            txt_a = txt_a.replace(/,/g, ".")
+            txt_b = txt_b.replace(/,/g, ".")
+            txt_c = txt_c.replace(/,/g, ".")
+            var num_a = Number.parseFloat( txt_a)
+            var num_b = Number.parseFloat( txt_b)
+            var num_c = Number.parseFloat( txt_c)
             var resultado = ""
             var delta = 0
             var x1 = 0
@@ -63,7 +69,9 @@
                     }
                 }
             }
-            res.innerHTML = "Resultado: " + resultado.replaceAll(".", ",")
+            resultado = resultado.replace(".", ",");
+            resultado = resultado.replace(".", ",");
+            res.innerHTML = "Resultado: " + resultado
         }
     </script>
 </body>

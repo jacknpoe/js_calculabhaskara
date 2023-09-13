@@ -12,11 +12,11 @@
     <input type="text" name="txtn1" id="txtn1" autofocus> x² +
     <input type="text" name="txtn2" id="txtn2"> x +
     <input type="text" name="txtn3" id="txtn3"> = 0  
-    <p><input type="button" value="Calcular" onclick = "calcular()"></body></p>
+    <p><input type="button" value="Calcular" style="width:100px" onclick = "calcular()"></p>
     <div id="res">Resultado:</div>
     <br><p><a href="https://github.com/jacknpoe/js_calculabhaskara">Repositório no GitHub</a></p><br>
     <form action="index.html" method="POST" style="border: 0px">
-        <p><input type="submit" name="voltar" value="Voltar"></p>
+        <p><input type="submit" name="voltar" value="Voltar"  style="width:100px"></p>
     </form>
     <script>
         function calcular(){
@@ -24,35 +24,35 @@
             var tn2 = window.document.getElementById("txtn2")
             var tn3 = window.document.getElementById("txtn3")
             var res = window.document.getElementById("res")
-            var a = Number( tn1.value.replaceAll(',','.'))
-            var b = Number( tn2.value.replaceAll(',','.'))
-            var c = Number( tn3.value.replaceAll(',','.'))
+            var num_a = Number( tn1.value.replaceAll(',','.'))
+            var num_b = Number( tn2.value.replaceAll(',','.'))
+            var num_c = Number( tn3.value.replaceAll(',','.'))
             // aqui
-            if( a == 0)
+            if( num_a == 0)
             {
-                if( b == 0)
+                if( num_b == 0)
                 {
                     var resultado = "x é indefinido"
                 } else {
-                    if( c == 0)
+                    if( num_c == 0)
                     {
                         var resultado = "x = 0"                    
                     } else {
-                        var resultado = "x = " + c / b * -1
+                        var resultado = "x = " + num_c / num_b * -1
                     }
                 }
             } else {
-                var delta = b**2 - ( 4 * a * c)
+                var delta = num_b ** 2 - ( 4 * num_a * num_c)
                 if( delta < 0)
                 {
                     var resultado = "x é indefinido"
                 } else {
                     if( delta == 0)
                     {
-                        var resultado = "x = " + ( b * -1 ) / ( 2 * a)
+                        var resultado = "x = " + ( num_b * -1 ) / ( 2 * num_a)
                     } else {
-                        x1 = ( b * -1 - delta ** 0.5) / ( 2 * a)
-                        x2 = ( b * -1 + delta ** 0.5) / ( 2 * a)
+                        x1 = ( num_b * -1 - delta ** 0.5) / ( 2 * num_a)
+                        x2 = ( num_b * -1 + delta ** 0.5) / ( 2 * num_a)
                         var resultado = "x = " + x1 + " e " + x2
                     }
                 }

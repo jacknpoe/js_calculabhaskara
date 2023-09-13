@@ -4,7 +4,7 @@ body{
 }
 input{
     font: normal 16pt Verdana;
-    width: 100px;
+    width: 60px;
 }
 div#res{
     margin-top: 20px;

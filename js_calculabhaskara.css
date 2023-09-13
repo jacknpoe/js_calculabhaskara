@@ -1,0 +1,11 @@
+body{
+    font: normal 16pt Verdana;
+    color: green;
+}
+input{
+    font: normal 16pt Verdana;
+    width: 100px;
+}
+div#res{
+    margin-top: 20px;
+}

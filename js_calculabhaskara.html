@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Bhaskara em JS</title>
+    <link rel="stylesheet" href="js_calculabhaskara.css"/>
+    <link rel="icon" type="image/png" href="js_calculabhaskara.png">
+</head>
+<body>
+    <h1>Calcula Bhaskara em JS</h1>
+    <input type="text" name="txtn1" id="txtn1"> x² +
+    <input type="text" name="txtn2" id="txtn2"> x +
+    <input type="text" name="txtn3" id="txtn3"> = 0  
+    <p><input type="button" value="Calcular" onclick = "calcular()"></body></p>
+    <div id="res">Resultado:</div>
+    <script>
+        function calcular(){
+            var tn1 = window.document.getElementById("txtn1")
+            var tn2 = window.document.getElementById("txtn2")
+            var tn3 = window.document.getElementById("txtn3")
+            var res = window.document.getElementById("res")
+            var a = Number( tn1.value.replaceAll(',','.'))
+            var b = Number( tn2.value.replaceAll(',','.'))
+            var c = Number( tn3.value.replaceAll(',','.'))
+            // aqui
+            if( a == 0)
+            {
+                if( b == 0)
+                {
+                    var resultado = "x é indefinido"
+                } else {
+                    if( c == 0)
+                    {
+                        var resultado = "x = 0"                    
+                    } else {
+                        var resultado = "x = " + c / b * -1
+                    }
+                }
+            } else {
+                var delta = b**2 - ( 4 * a * c)
+                if( delta < 0)
+                {
+                    var resultado = "x é indefinido"
+                } else {
+                    if( delta == 0)
+                    {
+                        var resultado = "x = " + ( b * -1 ) / ( 2 * a)
+                    } else {
+                        x1 = ( b * -1 - delta ** 0.5) / ( 2 * a)
+                        x2 = ( b * -1 + delta ** 0.5) / ( 2 * a)
+                        var resultado = "x = " + x1 + " e " + x2
+                    }
+                }
+            }
+            res.innerHTML = "Resultado: " + resultado.replaceAll(".", ",")
+        }
+    </script>
+</body>
+</html>

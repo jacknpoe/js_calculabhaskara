@@ -26,9 +26,9 @@
             var tn2 = window.document.getElementById("txtn2")
             var tn3 = window.document.getElementById("txtn3")
             var res = window.document.getElementById("res")
-            var num_a = Number( tn1.value.replaceAll(',','.'))
-            var num_b = Number( tn2.value.replaceAll(',','.'))
-            var num_c = Number( tn3.value.replaceAll(',','.'))
+            var num_a = Number.parseFloat( tn1.value.replaceAll(',','.'))
+            var num_b = Number.parseFloat( tn2.value.replaceAll(',','.'))
+            var num_c = Number.parseFloat( tn3.value.replaceAll(',','.'))
             // aqui
             if( num_a == 0)
             {

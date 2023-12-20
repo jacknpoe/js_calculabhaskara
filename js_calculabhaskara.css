@@ -9,3 +9,9 @@ input{
 div#res{
     margin-top: 20px;
 }
+@media (prefers-color-scheme: dark) { 
+  body{
+     color: #fff;
+     background-color: #111;
+  }
+}
